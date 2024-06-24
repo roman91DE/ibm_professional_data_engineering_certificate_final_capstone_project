@@ -5,8 +5,13 @@
 import mysql.connector
 
 # connect to database
-# You can get the Hostname and Password from the connection information section of Mysql 
-connection = mysql.connector.connect(user='root', password='<replace with your Mysql password>',host='<replace with your Mysql hostname>',database='sales')
+# You can get the Hostname and Password from the connection information section of Mysql
+connection = mysql.connector.connect(
+    user="root",
+    password="n3AsFJ4FDHXS2f8TB9haCWJY",
+    host="172.21.100.255",
+    database="sales",
+)
 
 # create cursor
 
@@ -46,7 +51,7 @@ SQL = "SELECT * FROM products"
 cursor.execute(SQL)
 
 for row in cursor.fetchall():
-	print(row)
+    print(row)
 
 # close connection
 connection.close()
